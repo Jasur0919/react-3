@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    gap: 50px !important;
+}
+
+.form input {
+    /* outline: none; */
+
+}
+
+
+/* 
+.h2 {
+    background: linear-gradient(to right, rgb(67, 124, 205), rgb(69, 214, 202));
+    padding: 10px 20px;
+    transition: .7s ;
+    color: white;
+
+}
+
+.h2:hover {
+    background: linear-gradient(to right, rgb(53, 192, 185), rgb(105, 116, 199));
+    color: black;
+
+} */
