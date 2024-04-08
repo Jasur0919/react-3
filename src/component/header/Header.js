@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Header.css'
+import './Aos.css'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Header = () => {
     const [name, setName] = useState("")
@@ -21,6 +24,12 @@ const Header = () => {
 
     }
 
+    useEffect(() => {
+      Aos.init({duration: 5000})
+      Aos.refresh()
+    }, [])
+
+
     let users = data?.map((u, inx) => (
     <div key={inx} className='hero'>
         <h3>{u.name}</h3>
@@ -33,8 +42,10 @@ const Header = () => {
     <div>
       {/* <h2>From</h2> */}
      <div className="container">
-     <div className="form">
-     <form onSubmit = {handleSubmit}>
+     <div 
+        data-aos='flip-left'
+     className="form">
+     <form   onSubmit = {handleSubmit}>
         <div className="logo_box_input">
         <input className='logo_input'
         required  
@@ -60,6 +71,9 @@ const Header = () => {
      </div>
       <div className="container">
       <div className="setName">
+            {users}
+        </div>
+      <div data-aos='fade-left' className="setName">
             {users}
         </div>
       </div>
