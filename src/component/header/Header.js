@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Header.css'
 
-const Form = () => {
+const Header = () => {
     const [name, setName] = useState("")
     const [age, setAge] = useState("")
     const [data, setData] = useState([])
@@ -31,28 +31,32 @@ const Form = () => {
 
   return (
     <div>
-      <h2>From</h2>
+      {/* <h2>From</h2> */}
+     <div className="container">
      <div className="form">
      <form onSubmit = {handleSubmit}>
-        <input
+        <div className="logo_box_input">
+        <input className='logo_input'
         required  
         value={name}
         onChange={(event) => setName(event.target.value)}
         type="text"
-        placeholder='nmae'
+        placeholder='Name'
         />
-        <input 
+        <input className='logo_input show'
         required
         value={age}
         onChange={(e) => setAge(e.target.value)}
         type="text"
-        placeholder='age'
+        placeholder='Age'
         />
+        </div>
 
         <button>Submit</button>
        
         </form>
 
+     </div>
      </div>
         <div className="d">
             {users}
@@ -62,4 +66,4 @@ const Form = () => {
   )
 }
 
-export default Form
+export default Header
