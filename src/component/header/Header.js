@@ -22,9 +22,9 @@ const Header = () => {
     }
 
     let users = data?.map((u, inx) => (
-    <div key={inx}>
+    <div key={inx} className='hero'>
         <h3>{u.name}</h3>
-        <p>{u.age}</p>
+        <h3>{u.age}</h3>
        
     </div>))
 
@@ -58,9 +58,11 @@ const Header = () => {
 
      </div>
      </div>
-        <div className="d">
+      <div className="container">
+      <div className="setName">
             {users}
         </div>
+      </div>
         
     </div>
   )
